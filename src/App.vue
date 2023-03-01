@@ -1,5 +1,6 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import Names from './components/Names.vue'
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+  <Names />
 </template>
 
 <style scoped>
@@ -26,5 +28,9 @@ import HelloWorld from './components/HelloWorld.vue'
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+html {
+    font-family: 'Fira Code', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 </style>

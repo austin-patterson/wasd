@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import https from 'https';
 import fs from 'fs';
 import dotenv from 'dotenv';
@@ -7,7 +8,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // VARIABLES
-var app = express();
+var app = express().use(cors({ origin: "https://localhost:3000" }));
 const expressPort = process.env.EXPRESS_PORT || 3000;
 
 // ROUTE CALLBACKS
@@ -23,6 +24,9 @@ function root(req, res) {
 
 app.get('/', root);
 
+app.get('/api/names', (req, res) => res.json(
+  { names: ['Jon Snow', 'Arietta LeNoire'] }
+))
 
 // START EXPRESS SERVER
 

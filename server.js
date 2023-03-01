@@ -12,7 +12,7 @@ const expressPort = process.env.EXPRESS_PORT || 3000;
 
 // ROUTE CALLBACKS
 
-function root(req, res) {
+function helloWorld(req, res) {
   res.json(JSON.stringify({
     msg: 'Hello World!'
   }));
@@ -21,7 +21,7 @@ function root(req, res) {
 
 // ROUTES
 
-app.get('/', root);
+app.get('/', helloWorld);
 
 
 // START EXPRESS SERVER

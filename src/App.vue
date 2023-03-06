@@ -15,9 +15,11 @@ import Tailwind from './components/Tailwind.vue';
     </div>
   -->
   
-  <Tailwind />
+  <!-- <Tailwind /> -->
   
   <!-- <HelloWorld msg="Vite + Vue" /> -->
+
+  <Word word="howdy" />
 </template>
 
 <style scoped>

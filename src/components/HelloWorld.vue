@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 
 defineProps({
-  msg: String,
+  salutation: String,
 })
 
 const count = ref(0)
